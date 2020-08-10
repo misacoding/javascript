@@ -14,9 +14,64 @@
             document.write("<br>")
             document.write(flag)
             
-            alert(num)
-            alert(word)
-            alert(flag)
+            //alert(num)
+            //alert(word)
+            //alert(flag)
+
+            //Addition
+            var a = 3
+            var b = 5
+            var result = a + b 
+            
+            document.write("<h1>Result is: " + result + "</h1>")
+
+            document.write("<h1>If - else else control statments</h1>")
+            var x= 101
+            if (x>0 && x%2 == 0) {
+                document.write("<h3>Even and positive number Number</h3>")
+            }
+            else if(x > 0 && x%2 == 1) {
+                document.write("<h3>Odd and positive number Number</h3>")                    
+            }
+            else if (x <= 0) {
+                document.write("<h3>Zero or negative number Number </h3>") 
+            }          
+            
+            var day = 1
+            /*
+            If we use if statment instead of switch
+            if (day == 1)
+                document.write("<h2>Sunday</h2>")
+            else if (day == 2)
+                document.write("<h2>Monday</h2>")
+            */    
+            switch (day)
+            {
+                case 1:
+                    document.write("<h2>Sunday</h2>")
+                    break
+                case 2:
+                    document.write("<h2>Monday</h2>")
+                    break
+                case 3:
+                    document.write("<h2>Tuseday</h2>")
+                    break
+                case 4:
+                    document.write("<h2>Wednesday</h2>")
+                    break
+                case 5:
+                    document.write("<h2>Thursday</h2>")
+                    break
+                case 6:
+                    document.write("<h2>Friday</h2>")
+                    break
+                case 7:
+                    document.write("<h2>Saturday</h2>")
+                    break
+                default:                                      
+                    document.write("<h2>Wrong input</h2>")        
+            }   
+                
         </script>
 
     </head>
