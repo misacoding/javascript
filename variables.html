@@ -70,8 +70,36 @@
                     break
                 default:                                      
                     document.write("<h2>Wrong input</h2>")        
-            }   
-                
+            }
+            /*//other codes
+            var x
+            for(x=6;x<=30; x+=4)
+            {
+                document.write("<h1>"+(x*2)+"</h1>") 
+            } 
+
+            var x = 2
+            while (x<=10)
+            {
+                document.write("<h2>" + x + "</h2>")
+                x=x+2
+            } 
+            */
+
+            var a = 6
+            do{
+                document.write("<h2>Hello there</h2>")
+                a-- // a= a - 1
+            } while(a>5)
+
+
+            function addNumber(a,b)
+            {            
+                var total = a + b
+                document.write("<h2>The total is : " + total + "</h2>")
+            }
+            
+            addNumber(6,5)   // function call
         </script>
 
     </head>
