@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Scope of variable </title>
+
+        
+    </head>
+    <body>
+        <script type="text/javascript">
+            var b = 5
+
+            function myfunction()
+            {
+                var1 = "Misa" 
+                var a = 7
+                document.write("<h2>"+a+"</h2>")
+                document.write("<h2>"+b+"</h2>")
+
+            }   
+
+            function getNumber() 
+            {
+                var c = 10
+                document.write("<h2>"+ (b+c) +"</h2>")
+            }
+            
+            myfunction()           
+            getNumber()
+
+            document.write("<h2>"+b+"</h2>")
+
+
+            var car1 = "Dasher"
+            var car2 = "Racer"
+            var car3 = "Crasher"
+
+
+            var cars = ["Dasher", "Racer", "Crasher"] 
+             
+            cars.push("Blaze") 
+    
+            for(var i=0; i< cars.length; i++) 
+            {
+                document.write("<h2>"+ cars[i]+"</h2>")
+
+            } 
+
+            // 1. This is the first way to create an object with data members and functions    
+            var Car = {
+                carBrand : "Telsa",
+                carModel : "Model 3",
+                price    : 25000,
+
+                teslaAutoPilot: function() {
+                    document.write("<h2>This car has Auto pilot</h2>")
+                }                   
+            }            
+            
+            Car.teslaAutoPilot()      
+            
+            // 2. This is the second way to create an object using constructor function
+            function RaceCar(carBrand,carModel,price){
+                this.brand = carBrand
+                this.model = carModel
+                this.price = price
+                this.autoPilot = function(){
+                    document.write("<h2>This race car has Auto pilot</h2>") 
+                }
+            }
+
+            var rc = new RaceCar("Ferrari", "Model 2", 276550)
+            rc.autoPilot()
+        
+
+        </script>
+
+    </body>
+</html>
