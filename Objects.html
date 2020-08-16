@@ -52,10 +52,17 @@
 
                 teslaAutoPilot: function() {
                     document.write("<h2>This car has Auto pilot</h2>")
-                }                   
+                },
+
+                startEngine : (speed) => {
+                    document.write("<h2>This car started the engine with speed " + speed + "</h2>") 
+                }
             }            
+            Car.fuelType = "Gas"
             
-            Car.teslaAutoPilot()      
+            Car.teslaAutoPilot()
+            document.write("<h2>"+Car.fuelType+"</h2>")
+            Car.startEngine(40)
             
             // 2. This is the second way to create an object using constructor function
             function RaceCar(carBrand,carModel,price){
@@ -65,11 +72,73 @@
                 this.autoPilot = function(){
                     document.write("<h2>This race car has Auto pilot</h2>") 
                 }
+
+                //3. arrow function
+                this.startEngine = (speed) => {
+                    document.write("<h2>This race car started the engine with speed " + speed + "</h2>") 
+                }
             }
 
             var rc = new RaceCar("Ferrari", "Model 2", 276550)
+            rc.fuelType = "Electric"
             rc.autoPilot()
-        
+            document.write("<h2>"+rc.fuelType+"</h2>")
+            rc.startEngine(80)
+
+            //If you delete the property, it will print out undefined
+            //delete rc.fuelType
+            //document.write("<h2>"+rc.fuelType+"</h2>")
+
+            var mouse = {
+                animalSize : "small",
+                animalName : "mouse",
+                animalSpeed : "8 mph",
+                sound       : "squeak",
+                feet        : 4,               
+
+                speak: function(times) {
+                    for(var i=0; i<times; i++ ) {
+                        document.write("<h2>" + this.sound + "</h2>")     
+                    }                    
+                },
+
+                count: function() {
+                    document.write("<h2>" + this.feet + "</h2>")
+                }   
+            }    
+
+            mouse.speak(1)
+            mouse.count()
+
+            function Pet(size, name, speed, sound, feet){
+                this.name = name
+                this.size = size
+                this.speed = speed
+                this.sound = sound
+                this.feet = feet
+
+                this.speak = (times) => {
+                    for(var i=0; i<times; i++){
+                        document.write("<h2>"+this.sound+"</h2>")  
+                    }
+                    
+                } 
+
+                this.count = () => {                    
+                    document.write("<h2>" + this.feet + "</h2>")
+                }
+
+            }
+
+            var cat = new Pet("medium", "lily", "30 mph", "meow", 4)
+
+            cat.speak(3)
+            cat.count()    
+
+
+            
+            
+
 
         </script>
 
