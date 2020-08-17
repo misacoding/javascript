@@ -25,6 +25,33 @@
             var str = document.getElementById("username").value
             var pw = document.getElementById("password").value
             alert("Your username is: "+str + ".\nYour password is : "+pw)
+            document.getElementById("username").value=""
+            document.getElementById("password").value=""
+        }
+
+        function fn2(){
+            var rd1 = document.getElementById("rd1")
+            var rd2 = document.getElementById("rd2")
+            var rd3 = document.getElementById("rd3")
+            var rd4 = document.getElementById("rd4")
+            var rd5 = document.getElementById("rd5")
+            var rd6 = document.getElementById("rd6")
+
+            if(rd1.checked==true)
+                alert("The pokemon you selected is: "+rd1.value)
+            else if(rd2.checked==true)
+                alert("The pokemon you selected is: "+rd2.value)
+            else if(rd3.checked==true)
+                alert("The pokemon you selected is: "+rd3.value)
+            else if(rd4.checked==true)
+                alert("The pokemon you selected is: "+rd4.value)
+            else if(rd5.checked==true)
+                alert("The pokemon you selected is: "+rd5.value)
+            else if(rd6.checked==true)
+                alert("The pokemon you selected is: "+rd6.value)
+            else
+                alert("There was no pokemon selected")
+
         }
 
 
@@ -39,7 +66,21 @@
     <br>
     <input type="text" id="password" placeholder="Password">
     <br>
-    <button onclick="fn1()" id ="btnl">Click Me</button> 
+    <button onclick="fn1()" id ="btnl">Sign in</button>
+    <br>
+    <input id="rd1" name="grpl" type="radio" value="Pikachu"> Pikachu </input>
+    <br>
+    <input id="rd2" name="grpl" type="radio" value="Bulbasuar"> Bulbasuar </input>
+    <br>
+    <input id="rd3" name="grpl" type="radio" value="Eevee"> Eevee </input>
+    <br>
+    <input id="rd4" name="grpl" type="radio" value="Ditto"> Ditto </input>
+    <br>
+    <input id="rd5" name="grpl" type="radio" value="Jigglypuff"> Jigglypuff </input>
+    <br>
+    <input id="rd6" name="grpl" type="radio" value="Magikarp"> Magikarp </input>
+    <br>
+    <button onclick="fn2()" > Select a pokemon</button>
 </body>
 
 </html>
