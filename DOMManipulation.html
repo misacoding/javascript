@@ -4,20 +4,24 @@
     <title> Introduction to DOM Manipulation</title>
     <script type="text/javascript">
 
-        var count = 0
+        var count = 0 //Count the number of times the click me button is clicked
+        var pcount = 0 //Count the number of times the change style button is clicked
+        var pcount2 = 0
 
         //Click event handler
         function buttonClick() {
-            if (count % 2 == 0) {
+            count = count + 1
+            //console.log(count) //print to the console          
+            
+            if (count % 2 == 1) {
                 document.getElementById("heading1")
-                    .innerHTML = "I am Misa"
+                    .innerHTML = "I am Misa, and I have set up this pokemon world for you to try."
             }
             else {
                 document.getElementById("heading1")
                     .innerHTML = "Hello"
             }           
             
-            count = count + 1
 
         }
         
@@ -36,24 +40,129 @@
             var rd4 = document.getElementById("rd4")
             var rd5 = document.getElementById("rd5")
             var rd6 = document.getElementById("rd6")
+            var rd7 = document.getElementById("rd7")
+            var rd8 = document.getElementById("rd8")
+            var rd9 = document.getElementById("rd9")
 
-            if(rd1.checked==true)
+
+
+
+            if(rd1.checked==true) {
                 alert("The pokemon you selected is: "+rd1.value)
-            else if(rd2.checked==true)
+                rd1.checked = false
+            }                
+            else if(rd2.checked==true){
                 alert("The pokemon you selected is: "+rd2.value)
-            else if(rd3.checked==true)
+                rd2.checked = false
+            }                
+            else if(rd3.checked==true){
                 alert("The pokemon you selected is: "+rd3.value)
-            else if(rd4.checked==true)
+                rd3.checked = false
+            }                
+            else if(rd4.checked==true){
                 alert("The pokemon you selected is: "+rd4.value)
-            else if(rd5.checked==true)
+                rd4.checked = false
+            }                
+            else if(rd5.checked==true){
                 alert("The pokemon you selected is: "+rd5.value)
-            else if(rd6.checked==true)
+                rd5.checked = false
+            }                
+            else if(rd6.checked==true){
                 alert("The pokemon you selected is: "+rd6.value)
+                rd6.checked = false 
+            }
+            else if(rd7.checked==true){
+                alert("The pokemon you selected is: "+rd7.value)
+                rd7.checked = false
+            }   
+            else if(rd8.checked==true){
+                alert("The pokemon you selected is: "+rd8.value)
+                rd8.checked = false
+            }
+            else if(rd9.checked==true){
+                alert("The pokemon you selected is: "+rd9.value)
+                rd9.checked = false
+            }   
             else
                 alert("There was no pokemon selected")
 
         }
 
+
+        function orderFood(){
+            var select = document.getElementById("Menu")
+            alert("You ordered " + select.options[select.selectedIndex].value + " for your pokemon")
+        }
+
+
+        function changeStyling(){
+            pcount = pcount + 1
+            console.log(pcount)
+            
+            var para = document.getElementsByTagName("p") //returns an array
+            // para is a variable which is an array of all elements having tag name p
+            // para[0] is the element containing "Did you know that there are 870 pokemon?"
+            // para[1] is the element containing "Did you know that slowbro is the only Pokemon that can devolve?"
+            //console.log(para)
+
+            if (pcount % 3 == 1) { //on odd times you clicked the change style button   
+                para[0].style.fontSize = 18 //change the font size of the first element to 20
+                para[0].style.color = "pink"
+                para[1].style.fontSize = 18
+                para[1].style.color = "orange"
+            }
+            else if(pcount % 3 == 2) { //on even times you clicked the change style button
+                para[0].style.fontSize = 16 //change the font size of the first element to 16
+                para[0].style.color = "red"
+                para[1].style.fontSize = 16
+                para[1].style.color = "pink"
+            }
+            else{
+                para[0].style.fontSize = 16
+                para[0].style.color = "black"
+                para[1].style.fontSize = 16
+                para[1].style.color = "black"
+            }               
+        }
+
+        function changeStyling2(){
+            pcount2 = pcount2 + 1 
+
+            var elements = document.getElementsByClassName("mypara")
+            //console.log(elements)
+            
+            if (pcount2 % 6 == 1) {  
+                for (var x=0; x<elements.length; x++) {
+                    elements[x].style.color="teal"      
+                }    
+            } 
+            else if (pcount2 % 6 == 2) {   
+                for (var x=0; x<elements.length; x++) {
+                    elements[x].style.color="blue"                
+                }                    
+            }
+            else if (pcount2 % 6 == 3) {
+                for (var x=0;x<elements.length;x++) {
+                    elements[x].style.color="aqua"
+                }
+            }
+            else if (pcount2 % 6 == 4) {
+                for (var x=0;x<elements.length;x++) {
+                    elements[x].style.color="purple"
+                }
+            }
+            else if (pcount2 % 6 == 5) {
+                for (var x=0;x<elements.length;x++) {
+                    elements[x].style.color="blue"
+                }
+            }
+            else if (pcount2 % 6 == 0) {
+                for (var x=0;x<elements.length;x++) {
+                    elements[x].style.color = "black"
+                }
+            }
+        }     
+                
 
     </script>
 </head>
@@ -61,12 +170,14 @@
 <body>
     <button onclick="buttonClick()">Click Me</button>
     <h1 id="heading1">Hello</h1>
+    <br>
     
     <input type="text" id="username" placeholder="Username">
     <br>
     <input type="text" id="password" placeholder="Password">
     <br>
     <button onclick="fn1()" id ="btnl">Sign in</button>
+    <br>
     <br>
     <input id="rd1" name="grpl" type="radio" value="Pikachu"> Pikachu </input>
     <br>
@@ -80,7 +191,42 @@
     <br>
     <input id="rd6" name="grpl" type="radio" value="Magikarp"> Magikarp </input>
     <br>
-    <button onclick="fn2()" > Select a pokemon</button>
+    <input id="rd7" name="grpl" type="radio" value="Mew"> Mew </input>
+    <br>
+    <input id="rd8" name="grpl" type="radio" value="Mewtwo"> Mewtwo </input>
+    <br>
+    <input id="rd9" name="grpl" type="radio" value="Psyduck"> Psyduck </input>
+    <br>
+    
+    <button onclick="fn2()" > Select pokemon</button>
+
+    <br>
+    <br>
+    <br> 
+
+    <select id="Menu">
+        <option value="pizza">Pizza</option>
+        <option value="burger">Burger</option>
+        <option value="pasta">Pasta</option>
+        <option value="rice">Rice</option>
+        <option value="fish">Fish</option>
+        <option value="soup">Soup</option>
+        <option value="french frys">French frys</option>
+        <option value="chips">Chips</option>
+        <option value="berries">Berries</option>
+        <option value="cookies">Cookies</option>
+    </select>
+
+    <button onclick="orderFood()">Order for your pokemon</button>
+
+    <br>
+    <p id="p1" class="mypara">Did you know that there are 870 pokemon?</p>
+    <p class="mypara">Did you know that slowbro is the only Pokemon that can devolve?</p>
+    <button onclick="changeStyling2()">Change style</button>
+    <br>
+    <br>
+    <a href="https://www.thefactsite.com/151-pokemon-facts/">Click here for more pokemon facts</a>
+
 </body>
 
 </html>
