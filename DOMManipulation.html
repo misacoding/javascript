@@ -162,7 +162,16 @@
                 }
             }
         }     
-                
+
+
+           function setNewImage() {
+                document.getElementById("img").src = "./Mira.png"
+           }
+
+           function setOldImage() {
+                document.getElementById("img").src = "./Amy.png"
+           }
+
 
     </script>
 </head>
@@ -226,6 +235,11 @@
     <br>
     <br>
     <a href="https://www.thefactsite.com/151-pokemon-facts/">Click here for more pokemon facts</a>
+
+    <br>
+    <br>
+    <img  id="img" onmouseover="setNewImage()" onmouseout="setOldImage()" src="./Amy.png" width="360">     
+    
 
 </body>
 
