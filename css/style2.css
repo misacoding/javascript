@@ -1,0 +1,9 @@
+#mydiv{
+    border: 5px solid rgb(69, 156, 255);
+    padding: 7px;
+}
+
+.mydivs{
+    border: 5px solid rgb(0, 119, 255);
+    padding: 7px;
+}

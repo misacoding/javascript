@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title> Events in jQuery</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <h2 id="heading1"> Events in JQuery</h2>
+        <button id="btn1">Please click me :)</button>
+        <button id="btn1">Don't click or else nothing -_+</button>
+
+        <div id="firstdiv" class="mydivs">
+            <p>Now</p>
+        </div>
+
+        <div id="seconddiv" class="mydivs">
+            <p>choose 1</p>
+        </div>
+
+        <div id="thirddiv" class="mydivs">
+            <ul>
+                <li>choose me!</li>
+                <li>no choose me!</li>
+                <li>you saw me first!</li>
+                <li>if you choose me i'll give you 1 million dollars</li>
+                
+            </ul>
+            
+        </div>
+
+         <li>choose me!</li>
+         <li>no choose me!</li>
+         <li>you saw me first!</li>
+         <li>if you choose me i'll give you 1 million dollars :)</li>
+        
+    </body>
+
+    <script src="./jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").mouseenter(fn1)
+            $("#btn1").mouseleave(fn2)
+
+            $("#btn2").hover(fn1,fn2)
+
+            function fn1(){
+                $("li:even").fadeToggle()
+            }
+
+            function fn2(){
+                $("li:even").fadeIn()
+            }
+        })
+    </script>
+</html>

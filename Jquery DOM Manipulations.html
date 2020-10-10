@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>jQuery DOM manipulaions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <h2>jQuery DOM manipulaions</h2>
+    <button id="btn1">3-2-1 action!</button>
+    <div id="div1" class="mydivs">
+        <p id="p1" value="Hello world">Hellooo <b>i'm</b> misa!</p>
+    </div>
+</body>
+<script src="./jquery.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function(){
+
+        $("#btn1").click(function(){
+            alert ($("#p1").css("font-size"))
+            alert ($("#p1").css("font-family"))
+            alert ($("#p1").css("font-style"))
+            alert ($("#p1").css("border"))
+            alert ($("#p1").css("font-weight"))
+            alert ($("#p1").attr("value"))
+            $("#p1").html("sooo...<b>um I like</b> to use <i>coding :)</i> ")
+        })
+    })
+</script>
+</html>

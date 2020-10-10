@@ -1,0 +1,58 @@
+<html>
+
+<head>
+  <title> Message box in jQuery UI</title>  
+  <link rel="stylesheet" href="css/style2.css">
+  <link rel="stylesheet" href="jqueryui/jquery-ui.css">
+  <link rel="stylesheet" href="jqueryui/jquery-ui.structure.css">
+  <link rel="stylesheet" href="jqueryui/jquery-ui.theme.css">
+</head>
+
+
+
+<body>
+    <h2>Message box in jQuery UI</h2>
+    <div id="firstdiv" class="mydivs">
+      <h3><i>Hello i'm misa!!!</i></h3>
+       <br>
+        <button id="btn1">Click to show message box</h3></button>
+    </div>
+    <br>
+    <div id="messagebox" title="Messagebox" class="mydivs">
+        <h3>This is Celestia from mlp</h3>
+        <img src="Photos/celestia.png" width="700">
+        <br>
+        <button>Please click me</button>
+    </div>
+</body>
+
+<script src="./jquery.js" type="text/javascript"></script>
+<script src="./jqueryui/jquery-ui.js" type="text/javascript"></script>
+
+<script>
+   $("#btn1").click(function(){
+
+    $("#messagebox").dialog({title:"Custom Messagebox",draggable:true,resizable:true,height:650,width:650,modal:false,
+    buttons: [
+     {
+         text:"Close",
+         icon:"ui-icon-star",
+         click: function (){
+            $(this).dialog("close")
+         }
+     },
+     {
+         text:"Ok",
+         icon:"ui-icon-heart",
+         click: function (){
+            $(this).dialog("close")
+         }     
+     }   
+    ]
+    })
+
+   
+   })
+  
+</script>
+</html>

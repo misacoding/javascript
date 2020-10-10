@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title> Callback and Chaining</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <h2 id="heading1"> Callback and Chaining</h2>
+        <button id="btn1">Toggle</button>
+
+
+        <div id="firstdiv" class="mydivs">
+            <p>Now</p>
+        </div>
+
+        <div id="seconddiv" class="mydivs">
+            <p>what type of hello do you peffer</p>
+        </div>
+
+        <div id="thirddiv" class="mydivs">
+            <ul>
+                <p>
+                hello 
+                hi 
+                hey 
+                how ya doing 
+                </p>
+                
+            </ul>
+            
+        </div>
+
+        
+    </body>
+
+    <script src="./jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            
+            $("#btn1").click(function(){
+                $("#firstdiv").slideUp(2000).slideDown(2000).fadeOut(2000).fadeIn(2000)
+            })
+
+        })       
+    </script>
+</html>

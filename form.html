@@ -24,7 +24,6 @@
 
         if(uname.value.trim()==""){
             
-            alert("Blank Username")
             uname.style.border = "solid 2px red"
             document.getElementById("lbluser").style.visibility="visible"
             return false
@@ -43,14 +42,30 @@
             return true
         }
      }    
-            
+         
+function validate3(){
 
+    var username = document.getElementById(uname)
+    var password = document.getElementById(pass)
+    var regx = /Misa/
+
+    if(regx.test(username)){
+        alert("invalid username")
+        document.getElementById("lbluser").style.visibility="hidden"
+        return false
+    }
+    else{
+        alert("Vaild username")
+        document.getElementById("lbluser").style.visibility="visible"
+        return true
+    }
+}   
 
     </script>
 </head>
 
 <body>
-    <form onsubmit="return validate2()" action="message.html">
+    <form onsubmit="return validate3()" action="message.html">
         <input id="uname" placeholder="Username" type = "text" required>
         <label id ="lbluser" style="color:rgb(238, 130, 130); visibility: hidden;" >Invalid</label>
         <br>
@@ -60,7 +75,7 @@
         <br>
         <button type="submit">Submit</button>
 
-    </form>     
+    </form>
     
 
 </body>

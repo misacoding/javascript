@@ -1,0 +1,146 @@
+.mydivs{
+    border: 2px solid rgb(0, 81, 255);
+    margin: 5px;
+    padding: 3px;
+}
+
+div p{
+    color: rgb(32, 8, 163);
+}
+
+
+.mycube{
+   width: 70px;
+   height: 70px; 
+   background-color: rgb(0, 89, 255);
+   opacity: 0.3;
+   position: absolute;
+   padding: 10px;
+}
+
+.mypara{
+    font-size: 30px;
+    color: rgb(34, 3, 121);
+}
+
+.newdivclass{
+    border-radius: 10px;
+    background-color: rgb(117, 160, 240);
+}
+
+.newparaclass{
+    font-weight: bold;
+    border-color: rgb(233, 106, 106);
+    background-color:  rgb(245, 89, 89);
+}
+
+.cube{
+     background-color: rgb(224, 102, 102);
+     font-size: 30px;
+     width: 66px;
+     height: 59px;
+     margin: 20px;
+}
+
+.cube2{
+    background-color: rgb(235, 179, 25);
+    font-size: 30px;
+    width: 66px;
+    height: 59px;
+    margin: 20px;
+}
+
+.cube3{
+    background-color: rgb(228, 210, 49);
+    font-size: 30px;
+    width: 66px;
+    height: 59px;
+    margin: 20px;
+}
+
+.cube4{
+    background-color: rgb(56, 230, 128);
+    font-size: 30px;
+    width: 66px;
+    height: 59px;
+    margin: 20px;
+}
+
+.cube5{
+    background-color: rgb(34, 126, 201);
+    font-size: 30px;
+    width: 66px;
+    height: 59px;
+    margin: 20px;
+}
+.cube6{
+    background-color: rgb(106, 34, 201);
+    font-size: 30px;
+    width: 66px;
+    height: 59px;
+    margin: 20px;
+}
+.cube7{
+    background-color: rgb(223, 99, 186);
+    font-size: 30px;
+    width: 66px;
+    height: 59px;
+    margin: 20px;
+}
+
+.cutecube{
+    background-color: rgb(54, 123, 163);
+    font-size: 30px;
+    width: 66px;
+    height: 59px;
+    margin: 20px;
+}
+
+.cutecube2{
+    background-color: rgb(59, 143, 192);
+    font-size: 30px;
+    width: 66px;
+    height: 59px;
+    margin: 20px;
+}
+
+.cutecube3{
+    background-color: rgb(79, 146, 185);
+    font-size: 30px;
+    width: 66px;
+    height: 59px;
+    margin: 20px;
+}
+
+.cutecube4{
+    background-color: rgb(114, 171, 204);
+    font-size: 30px;
+    width: 66px;
+    height: 59px;
+    margin: 20px;
+}
+
+.cutecube5{
+    background-color: rgb(152, 194, 219);
+    font-size: 30px;
+    width: 66px;
+    height: 59px;
+    margin: 20px;
+}
+
+.cutecube6{
+    background-color: rgb(198, 221, 235);
+    font-size: 30px;
+    width: 66px;
+    height: 59px;
+    margin: 20px;
+}
+
+
+.cutecube7{
+    background-color: rgb(218, 236, 247);
+    font-size: 30px;
+    width: 66px;
+    height: 59px;
+    margin: 20px;
+}

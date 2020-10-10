@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <title>jQuery DOM manipulaions 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <h2>jQuery DOM manipulaions 3</h2>
+    <button id="btn1">Append</button>
+    <button id="btn2">After</button>
+    <button id="btn3">Prepend</button>
+    <button id="btn4">Before</button>
+    <br>
+    <br>
+    <button id="btn5">Remove</button>
+    <button id="btn6">Empty</button>
+    <div id="div1" class="mydivs">
+        <p id="p1" class="p1class" value="Hello world!">Hellooo <b>i'm</b> misa!</p>
+    </div>
+</body>
+<script src="./jquery.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function(){
+       
+          $("#btn1").click(function(){
+
+            $("#div1").append("<p>And i'm a youtuber, the <b>channl name is</b> <i>misa and anna</i> vlog ")
+        })
+
+          $("#btn2").click(function(){
+
+            $("#div1").after("<p> want to <b>see</b> <i>more???</i> ")
+        })
+
+        $("#btn3").click(function(){
+
+            $("#div1").prepend("<p>uh <b>um</b> </p>")
+        })
+
+        $("#btn4").click(function(){
+
+            $("#div1").before("<p>sooo</p>")
+        })
+
+        $("#btn5").click(function(){
+
+            $("#div1").remove()
+        }) 
+
+        $("#btn6").click(function(){
+
+            $("#div1").empty()
+        })      
+    })
+</script>
+</html>

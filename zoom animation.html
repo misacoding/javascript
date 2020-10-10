@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Zoom in zoom out</title>
+        <script type="text/javascript">
+
+        var width=100
+        var differnce=1.4
+        var intervaILD
+        var intervaILD2
+        var inside = false
+
+        document.getElementById("img1").style.width=width
+
+        
+        function increase(){
+            inside = true
+            intervaILD = setInterval(zoomIn,25)
+        }
+
+        function zoomIn(){            
+            if(width<600 && inside==true){
+                width = width+differnce
+                document.getElementById("img1").style.width=width
+            }
+            else{
+                clearInterval(intervaILD)
+            }                       
+        }
+
+        function decrease(){
+            inside = false
+            intervaILD2 = setInterval(zoomOut,25)
+        }
+
+        function zoomOut(){
+
+            if(width>100 && inside==false){
+                width = width-differnce
+                document.getElementById("img1").style.width=width
+            }
+                
+            else{
+                clearInterval(intervaILD2)
+            }
+        }             
+
+        </script>
+
+    </head>
+    <body>
+        
+        <br>
+        <img onmouseover="increase()" onmouseout="decrease()" id="img1" src="Photos/chibi.png" width="100">
+    </body>

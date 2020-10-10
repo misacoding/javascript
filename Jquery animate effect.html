@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title> Effects in jQuery</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <h2 id="heading1"> Effects in jQuery</h2>
+        <button id="btn1">Please click me :)</button>
+        <button id="btn2">Now click me o_o</button>
+        <button id="btn3">Animate</button>
+
+
+        <div id="firstdiv" class="mydivs">
+            <p>Now</p>
+        </div>
+
+        <div id="seconddiv" class="mydivs">
+            <p>choose 1</p>
+        </div>
+
+        <div id="thirddiv" class="mydivs">
+            <ul>
+                <li>choose me!</li>
+                <li>no choose me!</li>
+                <li>you saw me first!</li>
+                <li>if you choose me i'll give you 1 million dollars</li>
+                
+            </ul>
+            
+        </div>
+        <div id="cube" class="mycube">            
+            <p class="mypara"> .   '_'   .</p>
+        </div>
+
+
+    </body>
+
+    <script src="./jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $("#btn3").click(function(){
+                
+                $("#cube").animate({
+                    left:'798px',
+                    opacity:'1'
+                    
+                },3000)
+            })
+        })
+
+        
+    </script>
+</html>

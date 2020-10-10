@@ -1,0 +1,28 @@
+<html>
+
+<head>
+  <title>Autocomplete in jQuery UI</title>  
+  <link rel="stylesheet" href="css/style2.css">
+  <link rel="stylesheet" href="jqueryui/jquery-ui.css">
+  <link rel="stylesheet" href="jqueryui/jquery-ui.structure.css">
+  <link rel="stylesheet" href="jqueryui/jquery-ui.theme.css">
+</head>
+
+
+
+<body>
+    <h3>Autocomplete in jQuery UI</h3>
+    <div id="mydiv">
+      <label>Enter your favorite food</label>
+      <input type="text" name="" id="foodtextbox">
+    </div>
+</body>
+
+<script src="./jquery.js" type="text/javascript"></script>
+<script src="./jqueryui/jquery-ui.js" type="text/javascript"></script>
+
+<script>
+   var myfoods = ["pizza","pasta","apples","dumplings","beef","pork","soup","oranges","icecream","bread","hotdog","hamburgers","chocolete","cake","cheese","sandwich","crabs","bacon","french fries","yogurt","honey","corn"]
+   $("#foodtextbox").autocomplete({source:myfoods,autoFocus:true,delay:300})
+</script>
+</html>

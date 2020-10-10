@@ -1,0 +1,53 @@
+<html>
+
+<head>
+  <title>Themes in jQuery UI</title>  
+  <link rel="stylesheet" href="css/style2.css">
+  <link rel="stylesheet" href="jqueryui/jquery-ui-custom2/jquery-ui.css">
+  <link rel="stylesheet" href="jqueryui/jquery-ui-custom2/jquery-ui.structure.css">
+  <link rel="stylesheet" href="jqueryui/jquery-ui-custom2/jquery-ui.theme.css">
+</head>
+
+
+
+<body>
+    <h3>Themes in jQuery UI</h3>
+    <div id="dateinput" title="My Calendar">
+        
+    </div>
+    <br>
+    <div id="messagebox" title="Messagebox">
+       <img src="Photos/chibi.png" width="400"> 
+    </div>
+    <br>    
+    <div id="pannels" style="width: 70%" title="My tab">
+      <h3>Earth</h3>
+        <p>Earth is our home planet. Scientists believe Earth and its moon formed around the same time as the rest of the solar system. They think that was about 4.5 billion years ago. Earth is the fifth-largest planet in the solar system. Its diameter is about 8,000 miles. And Earth is the third-closest planet to the sun. Its average distance from the sun is about 93 million miles. Only Mercury and Venus are closer.</p>
+
+      <h3>Is earth round?</h3>
+        <p>Humans have known that Earth is round for more than 2,000 years! The ancient Greeks measured shadows during summer solstice and also calculated Earth's circumference. They used positions of stars and constellations to estimate distances on Earth. They could even see the planet's round shadow on the moon during a lunar eclipse. (We still can see this during lunar eclipses.) Today, scientists use geodesy, which is the science of measuring Earth's shape, gravity and rotation. Geodesy provides accurate measurements that show Earth is round. With GPS and other satellites, scientists can measure Earth's size and shape to within a centimeter. Pictures from space also show Earth is round like the moon. </p>
+
+
+      <h3>The moon</h3>
+        <p>Chances are that when you imagine the night sky, one of the first things that comes to mind is the Moon “glowing” in the darkness.                The Moon has always held a special place in our imaginations and in daily life. Earth has just one moon – a rocky, cratered place, roughly a quarter the size of Earth and an average of 238,855 miles away. The Moon can be seen with the naked eye most nights as it traces its 27-day orbit around our planet. The Moon does not shine with its own light. It simply reflects light coming from the Sun.</p>
+
+
+
+    </div>
+</body>
+
+<script src="./jquery.js" type="text/javascript"></script>
+<script src="./jqueryui/jquery-ui.js" type="text/javascript"></script>
+
+<script>
+    $(document).ready(function(){
+        $("#dateinput").datepicker({numberOfMonths: 1,changeYear: true,changeMonth: true,showWeek: true,weekHeader: "Weeks",showOtherMonths: true})
+
+        $("#pannels").accordion({collapsible:true,event:"click",animate:396,active:0,heightStyle:true,})
+
+        $("#messagebox").dialog({title:"Custom Messagebox",draggable:true,resizable:true,height:410,width: 410,modal:false})
+
+       
+    })
+</script>
+</html>
